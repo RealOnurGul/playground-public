@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Snake</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="game-panel" aria-label="Snake game">
+        <header class="top-bar">
+          <div>
+            <h1>Snake</h1>
+            <p id="status" aria-live="polite">Use arrows, WASD, or the buttons.</p>
+          </div>
+          <div class="score-box" aria-label="Score">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+        </header>
+
+        <canvas id="board" width="480" height="480" aria-label="Snake board"></canvas>
+
+        <div class="actions">
+          <button id="restart" type="button">Restart</button>
+        </div>
+      </section>
+
+      <nav class="touch-controls" aria-label="Snake controls">
+        <button class="control control-up" type="button" data-direction="up" aria-label="Move up">↑</button>
+        <button class="control control-left" type="button" data-direction="left" aria-label="Move left">←</button>
+        <button class="control control-down" type="button" data-direction="down" aria-label="Move down">↓</button>
+        <button class="control control-right" type="button" data-direction="right" aria-label="Move right">→</button>
+      </nav>
+    </main>
+
+    <script src="snake.js"></script>
+  </body>
+</html>
