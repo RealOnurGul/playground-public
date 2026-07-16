@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#111713">
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Snake game">
+      <section class="hud" aria-label="Game status">
+        <div>
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>Best</span>
+          <strong id="best">0</strong>
+        </div>
+        <button id="pauseButton" type="button" aria-label="Pause game">Pause</button>
+      </section>
+
+      <canvas id="game" aria-label="Snake board"></canvas>
+
+      <section class="controls" aria-label="Touch controls">
+        <button class="control up" type="button" data-direction="up" aria-label="Move up">▲</button>
+        <button class="control left" type="button" data-direction="left" aria-label="Move left">◀</button>
+        <button class="control right" type="button" data-direction="right" aria-label="Move right">▶</button>
+        <button class="control down" type="button" data-direction="down" aria-label="Move down">▼</button>
+      </section>
+
+      <button id="overlay" class="overlay" type="button">
+        <strong id="overlayTitle">Tap to start</strong>
+        <span id="overlayText">Swipe, use arrows, or tap the controls.</span>
+      </button>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
